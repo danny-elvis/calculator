@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="calc">
+
+        <div id="display">
+            <input id="memory" value="" inputmode='none'>
+            <input id="input" autofocus value="" autocomplete="off" inputmode='none'>
+        </div>
+        
+        <div id="buttons">
+            <span id="top">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="clicked(this.textContent)">/</button>
+                <button onclick="clicked(this.textContent)">*</button>
+                <button onclick="clicked(this.textContent)">-</button>
+            </span>
+            <span id="side">
+                <button onclick="clicked(this.textContent)">+</button>
+                <button onclick="clicked(this.textContent)">.</button>
+                <button id="enter" onclick="clicked(this.textContent)">Enter</button>
+            </span>
+            <span id="numbers">
+                <button onclick="clicked(this.textContent)">7</button>
+                <button onclick="clicked(this.textContent)">8</button>
+                <button onclick="clicked(this.textContent)">9</button>
+                <button onclick="clicked(this.textContent)">4</button>
+                <button onclick="clicked(this.textContent)">5</button>
+                <button onclick="clicked(this.textContent)">6</button>
+                <button onclick="clicked(this.textContent)">1</button>
+                <button onclick="clicked(this.textContent)">2</button>
+                <button onclick="clicked(this.textContent)">3</button>
+                <button onclick="clicked(this.textContent)" id="zero">0</button>
+                <button >,</button>
+            </span>
+                        
+
+        </div>
+
+    </div><!--div calc-->
+
+	<script src="calculator.js"></script>
+  </body>
+</html>
