@@ -12,34 +12,34 @@
     <div id="calc">
 
         <div id="display">
-            <input id="memory" value="" inputmode='none'>
-            <input id="input" autofocus value="" autocomplete="off" inputmode='none'>
+            <p id="memory"></p>
+            <p id="input">0</p>
         </div>
         
         <div id="buttons">
             <span id="top">
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="clicked(this.textContent)">/</button>
-                <button onclick="clicked(this.textContent)">*</button>
-                <button onclick="clicked(this.textContent)">-</button>
+                <button>C</button>
+                <button>/</button>
+                <button>*</button>
+                <button>-</button>
             </span>
             <span id="side">
-                <button onclick="clicked(this.textContent)">+</button>
-                <button onclick="clicked(this.textContent)">.</button>
-                <button id="enter" onclick="clicked(this.textContent)">Enter</button>
+                <button>+</button>
+                <button>.</button>
+                <button id="enter">Enter</button>
             </span>
             <span id="numbers">
-                <button onclick="clicked(this.textContent)">7</button>
-                <button onclick="clicked(this.textContent)">8</button>
-                <button onclick="clicked(this.textContent)">9</button>
-                <button onclick="clicked(this.textContent)">4</button>
-                <button onclick="clicked(this.textContent)">5</button>
-                <button onclick="clicked(this.textContent)">6</button>
-                <button onclick="clicked(this.textContent)">1</button>
-                <button onclick="clicked(this.textContent)">2</button>
-                <button onclick="clicked(this.textContent)">3</button>
-                <button onclick="clicked(this.textContent)" id="zero">0</button>
-                <button >,</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button id="zero">0</button>
+                <button>,</button>
             </span>
                         
 
@@ -47,6 +47,6 @@
 
     </div><!--div calc-->
 
-	<script src="calculator.js"></script>
+	<script src="calc.js"></script>
   </body>
 </html>
