@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Red+Hat+Display:wght@500&display=swap');
+@font-face {
+    font-family: "Display";
+    src: url("./fonts/digital-display-tfb.ttf.woff");
+} 
+
+@font-face {
+    font-family: "Buttons";
+    src: url("./fonts/OPTIEdgar-Extended.otf");
+}
+
 
 * {
     margin: 0;
@@ -8,6 +17,7 @@
 }
 
 body {
+    background-color: #9ba7b1;
     width: 100%;
     /*min-width: 270px;*/
     height: 100vh;
@@ -17,10 +27,15 @@ body {
 }
 
 #calc {
-    max-width: 500px;
+    min-width: 200px;
+    max-width: 370px;
     align-items: center;
-    background-color: #6667AB;
-    border: solid 3px #555697;
+    background-color: #d7cec3;
+    border: solid 4px;
+    border-left-color: #f5f2ea;
+    border-top-color: #f5f2ea;
+    border-right-color: #78675b;
+    border-bottom-color: #78675b;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -29,16 +44,16 @@ body {
 }
 
 #display {
-    background-color: rgb(97, 111, 111);
-    min-height: 100px;
+    background-color: #1c0d0f;
+    /*min-height: 100px;*/
     height: 13vh;
     width: 83%;
     max-width: 83vw;
-    border: solid 2px;
-    border-left-color: #424376 ;
-    border-top-color: #424376 ;
-    border-right-color: rgb(144, 144, 209 );
-    border-bottom-color: rgb(144, 144, 209 );
+    border: solid 3px;
+    border-left-color: #c1bec0;
+    border-top-color: #c1bec0;
+    border-right-color: #d4d2d1;
+    border-bottom-color: #d4d2d1;
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
@@ -53,17 +68,15 @@ p {
     background: none;
     max-width: 100%;
     font-size: 6vh;
-    font-family: 'Major Mono Display', monospace;
-    font-weight: 600;
+    font-family: 'Display', monospace;
+    font-weight: 400;
     color: transparent;
-    text-shadow: 0 0 0 #211c1c;
+    text-shadow: 0 0 0 #f9165a;
     
 }
 
-
-
 #memory {
-    font-size: 1em;
+    font-size: 3.5vh;
 }
 
 #buttons {
@@ -75,13 +88,18 @@ p {
 }
 
 button {
-    font-size: 1.8em;
-    font-family: 'Red Hat Display', sans-serif;
+    font-size: 4.2vh;
+    font-family: 'Buttons', sans-serif;
     margin: 5% 2% 2% 2%;
     height: auto;
     width: 28%;
-    background-color: rgb(144, 144, 209);
-    border-radius: 5px;
+    background-color: #e9ebf1;
+    border-radius: 25px;
+    border: solid 3px;
+    border-right-color: #b0aeb0;
+    border-bottom-color: #b0aeb0 ;
+    border-left-color: #d4d2d1;
+    border-top-color: #d4d2d1;
 }
 
 button:hover {
@@ -94,6 +112,23 @@ button:hover {
     width: 100%;
     display: flex;
     justify-content: space-around;
+} 
+
+#top button , #side button {
+    background-color: #198ed6;
+    border-right-color: #146393;
+    border-bottom-color: #146393;
+    border-left-color: #4badeb;
+    border-top-color: #4badeb;
+}
+
+#top button:first-child {
+    color: #e9ebf1;
+    background-color: #c9203e;
+    border-right-color: #811529;
+    border-bottom-color: #811529 ;
+    border-left-color: #eb4765;
+    border-top-color: #eb4765;
 }
 
 #numbers {
@@ -101,6 +136,12 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+#numbers button {
+
+    /*background-color: whitesmoke;*/
+
 }
 
 #side {
@@ -111,6 +152,7 @@ button:hover {
 }
 
 #side button {
+    background-color: #198ed6;
     width: 85%;
     margin: 17% 2% 2% 2%;
 }
@@ -121,7 +163,7 @@ button:hover {
 
 #enter {
     height: 45%;
-    font-size: 1em;
+    /*font-size: 1.8em;*/
 }
 
 #zero {

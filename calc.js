@@ -18,7 +18,6 @@ let lastKey = null;
 let dotUsed = false;
 let enterDisabled;
 
-
 //--------------------------------------------------->
 function clicked(e) {
 
@@ -27,9 +26,6 @@ function clicked(e) {
   document.dispatchEvent(
       new KeyboardEvent("keyup", {
           key: e,
-          /*keyCode: 69, // example values.
-          code: "KeyE", // put everything you need in this object.
-          which: 69, */
       })
   );
 
@@ -65,6 +61,7 @@ function whichKey(e) {
       operation(e);
       break;
     case "Enter":
+    case "=":
       evaluate();
       break;
     case "C":
@@ -88,19 +85,15 @@ let displayDot = () => {
 };
 
 let display = (e) => {
-  console.log("Last: " + lastKey);
   if (isNumber && (lastKey == null || lastKey == 'Enter')) {
     input.innerHTML = e;
   } else if (isNumber) {
     input.innerHTML += e;
   }
   lastKey = e;
-  console.log("Now: " + lastKey);
-  console.log("Type of: " + typeof lastKey);
 };
 
 let operation = (e) => {
-  console.log("Last: " + lastKey);
   if (lastKey == null && e == "-") {
     input.innerHTML = e;
   } else if (typeof lastKey == "number" || enterDisabled) {
@@ -120,7 +113,6 @@ let evaluate = () => {
     memory.innerHTML = input.innerHTML;
     input.innerHTML = eval(input.innerHTML);
     if (input.innerHTML.length > 10) {
-      console.log(input.innerHTML.length);
       input.innerHTML = eval(memory.innerHTML).toFixed(4).slice(0, -1);
     }
   }
